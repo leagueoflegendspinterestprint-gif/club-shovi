@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шаверма «Монамила» — Идеальный вкус</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Базовые настройки */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        :root {
+            --primary-color: #ff4757; /* Сочный красный */
+            --accent-color: #ffa502; /* Аппетитный оранжевый */
+            --dark-color: #2f3542;
+            --light-color: #f1f2f6;
+        }
+
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        /* Навигация */
+        header {
+            background-color: #fff;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        /* Главный экран (Hero) */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(rgba(47, 53, 66, 0.8), rgba(47, 53, 66, 0.8)), url('https://images.unsplash.com/photo-1648827453303-75b2dd767d4e?auto=format&fit=crop&q=80&w=1920') center/cover;
+            color: #fff;
+            min-height: 70vh;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+        }
+
+        .btn:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 165, 2, 0.5);
+        }
+
+        /* Преимущества */
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 80px 20px;
+            background: #fff;
+        }
+
+        .feature-card {
+            flex-basis: 30%;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            color: var(--primary-color);
+            font-size: 24px;
+            margin: 15px 0;
+        }
+
+        .feature-card p {
+            color: #57606f;
+        }
+
+        .feature-icon {
+            font-size: 50px;
+        }
+
+        /* Форма заказа */
+        .order-section {
+            padding: 80px 20px;
+            background-color: var(--light-color);
+            display: flex;
+            justify-content: center;
+        }
+
+        .order-form-container {
+            background: #fff;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .order-form-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+            color: var(--dark-color);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: #57606f;
+        }
+
+        .form-group input, 
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #dfe4ea;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus, 
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .submit-btn {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        /* Подвал */
+        footer {
+            background-color: var(--dark-color);
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        /* Мобильная адаптация */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            .feature-card { flex-basis: 100%; }
+            header { padding: 20px; justify-content: center; }
+            .order-form-container { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header>
+        <div class="logo">Мона<span>мила</span></div>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <h1>Самая сочная шаверма в городе</h1>
+        <p>Хрустящий лаваш, много сочного мяса, свежие овощи и наш секретный фирменный соус. Закажи онлайн и забери без очереди!</p>
+        <a href="#order-form" class="btn">Оформить заказ</a>
+    </section>
+
+    <!-- Почему мы -->
+    <section class="features">
+        <div class="feature-card">
+            <div class="feature-icon">🥩</div>
+            <h3>Мясо на углях</h3>
+            <p>Мы используем только свежее фермерское мясо и жарим его до идеальной корочки.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🌶️</div>
+            <h3>Секретный соус</h3>
+            <p>Авторский рецепт, который делает нашу шаверму неповторимо вкусной и сочной.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">⏱️</div>
+            <h3>Без очередей</h3>
+            <p>Оформляй заказ на сайте, приходи к назначенному времени и забирай горячую шаверму.</p>
+        </div>
+    </section>
+
+    <!-- Блок заказа -->
+    <section class="order-section" id="order-form">
+        <div class="order-form-container">
+            <h2>Сделать заказ</h2>
+            <form id="shawarmaForm">
+                <div class="form-group">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" placeholder="Как к вам обращаться?" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Номер телефона</label>
+                    <input type="tel" id="phone" placeholder="+7 (999) 000-00-00" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="shawarma-type">Выбери свою Монамилу</label>
+                    <select id="shawarma-type" required>
+                        <option value="" disabled selected>Выбрать шаверму...</option>
+                        <option value="classic">Классическая сочная (350 ₽)</option>
+                        <option value="cheese">Сырная мощь (390 ₽)</option>
+                        <option value="spicy">Острая мексиканская (380 ₽)</option>
+                        <option value="vega">Вегетарианская с фалафелем (330 ₽)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Количество</label>
+                    <input type="number" id="quantity" min="1" max="20" value="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Через сколько заберете?</label>
+                    <select id="time" required>
+                        <option value="15">Через 15 минут</option>
+                        <option value="30">Через 30 минут</option>
+                        <option value="60">Через 1 час</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn submit-btn">Заказать сейчас</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <p>🍔 Точка шавермы «Монамила» | Вкусно. Быстро. С душой.</p>
+        <p style="margin-top: 10px; font-size: 14px; color: #a4b0be;">Город, Улица Вкусная, 10 | Ежедневно с 10:00 до 23:00</p>
+    </footer>
+
+    <!-- Скрипт для обработки формы -->
+    <script>
+        document.getElementById('shawarmaForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Останавливаем стандартную отправку формы
+            
+            // Получаем данные
+            const name = document.getElementById('name').value;
+            const type = document.getElementById('shawarma-type').options[document.getElementById('shawarma-type').selectedIndex].text;
+            
+            // Имитация успешного заказа
+            alert(`🎉 Круто, ${name}! Твой заказ (${type}) принят.\nНаш шеф уже ставит мясо на огонь. Ждем тебя!`);
+            
+            // Очищаем форму
+            this.reset();
+        });
+    </script>
+</body>
+</html>
